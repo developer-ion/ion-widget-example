@@ -23,6 +23,39 @@ function App() {
         width:'250'
     });
     phone.init();
+
+    phone.on('CONNECTION_STATUS', function(e) {
+      console.log("CONNECTION_STATUS:");
+      console.log(e);
+    });
+
+    phone.on('REGISTRATION_STATUS', function(e) {
+        console.log("REGISTRATION_STATUS:");
+        console.log(e);
+    });
+
+    phone.on('CALL_LISTEN', function(e) {
+        console.log("CALL_LISTEN:");
+        console.log(e);
+    });
+    phone.on('CALL_STATUS', function(e) {
+        console.log("CALL_STATUS:");
+        console.log(e);
+    });
+    phone.on('DIAL_ESTABLISHED', function(e) {
+        console.log("DIAL_ESTABLISHED:");
+        console.log(e);
+    });
+
+    phone.on('UNREGISTERED', function(e) {
+        console.log("UNREGISTERED:");
+        console.log(e);
+    });
+
+    phone.on('AUTO-DIAL', function(e) {
+        console.log("AUTO-DIAL:");
+        console.log(e);
+    });
   },[])
 
   return (
